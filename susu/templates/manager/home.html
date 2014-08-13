@@ -1,0 +1,61 @@
+{% extends 'layout/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row">
+        <div class="thumbnail col-lg-2 col-lg-offset-2">
+            <a href="{% url 'susu:register' %}">
+                <img src="{% static "images/add-user.jpg" %}"/>
+
+                <div class="caption">
+                    Add Member
+                </div>
+            </a>
+
+        </div>
+        <div class="thumbnail col-lg-2 col-lg-offset-1">
+            <a href="{% url 'susu:deposit' %}">
+                <img src="{% static "images/deposit.jpg" %}"/>
+
+                <div class="caption">
+                    Deposit
+                </div>
+            </a>
+
+        </div>
+        <div class="thumbnail col-lg-2 col-lg-offset-1">
+            <a href="{% url 'susu:balance' %}">
+                <img src="{% static "images/balance.png" %}"/>
+
+            <div class="caption">
+                Balance
+            </div>
+            </a>
+
+        </div>
+        <div class="thumbnail col-lg-2 col-lg-offset-2">
+            <img src="{% static "images/notify.png" %}"/>
+
+            <div class="caption">
+                Send Notifications
+            </div>
+        </div>
+        <div class="thumbnail col-lg-2 col-lg-offset-1">
+            <a href="{% url 'susu:print-vouchers' %}">
+                <img src="{% static "images/print.png" %}"/>
+
+                <div class="caption">
+                    Print Vouchers
+                </div>
+            </a>
+        </div>
+        <div class="thumbnail col-lg-2 col-lg-offset-1">
+            <img src="{% static "images/graph.jpg" %}"/>
+
+            <div class="caption">
+                View Statistics
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
